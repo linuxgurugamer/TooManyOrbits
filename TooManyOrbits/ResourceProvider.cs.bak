@@ -1,5 +1,4 @@
-using KSP.Localization;
-using UnityEngine;
+﻿using UnityEngine;
 using ToolbarControl_NS;
 using static TooManyOrbits.UI.RegisterToolbar;
 
@@ -11,12 +10,12 @@ namespace TooManyOrbits
         private readonly string m_resourcePathNoGameData;
 
 
-        public Texture ToolbarIcon => LoadTextureResource(Localizer.Format("#LOC_TMO_18"));
-        public Texture GreenToolbarIcon => LoadTextureResource(Localizer.Format("#LOC_TMO_19"));
-        public Texture PencilIcon => LoadTextureResource(Localizer.Format("#LOC_TMO_20"));
-        public Texture ExpandIcon => LoadTextureResource(Localizer.Format("#LOC_TMO_21"));
-        public Texture RetractIcon => LoadTextureResource(Localizer.Format("#LOC_TMO_22"));
-        public Texture MoveIcon => LoadTextureResource(Localizer.Format("#LOC_TMO_23"));
+        public Texture ToolbarIcon => LoadTextureResource("ToolbarIcon-38");
+        public Texture GreenToolbarIcon => LoadTextureResource("ToolbarIcon-Green");
+        public Texture PencilIcon => LoadTextureResource("Pencil");
+        public Texture ExpandIcon => LoadTextureResource("Expand");
+        public Texture RetractIcon => LoadTextureResource("Retract");
+        public Texture MoveIcon => LoadTextureResource("Move");
 
 
         public ResourceProvider(string resourcePath)

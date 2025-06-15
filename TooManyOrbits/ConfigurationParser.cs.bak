@@ -1,5 +1,4 @@
-using KSP.Localization;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
@@ -79,7 +78,7 @@ namespace TooManyOrbits
 
 		public static void SaveToFile(string path, Configuration configuration)
 		{
-			ConfigNode configNode = new ConfigNode(Localizer.Format("#LOC_TMO_1"));
+			ConfigNode configNode = new ConfigNode("Configuration");
 			foreach (var key in Keys)
 			{
 				string value = key.PropertyGetter(configuration) ?? key.DefaultValue;

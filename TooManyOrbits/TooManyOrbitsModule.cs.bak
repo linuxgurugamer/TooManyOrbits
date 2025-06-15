@@ -1,5 +1,4 @@
-using KSP.Localization;
-using KSP.UI.Screens;
+﻿using KSP.UI.Screens;
 using System.ComponentModel;
 using System.IO;
 using System.Collections;
@@ -80,11 +79,11 @@ namespace TooManyOrbits
 			m_visibilityController.OnVisibilityChanged += OnOrbitVisibilityChanged;
 
 			// setup window
-			Log.Debug(Localizer.Format("#LOC_TMO_24"));
+			Log.Debug("Creating window");
 			m_window = new ConfigurationWindow(ModName, m_configuration, m_visibilityController, resourceProvider);
 
 			// setup toolbar button
-			Log.Debug(Localizer.Format("#LOC_TMO_25"));
+			Log.Debug("Creating toolbar button");
 			if (toolbarControl == null)
 			{
 				BuildButton();
@@ -117,11 +116,11 @@ namespace TooManyOrbits
 				toolbarControl.AddToAllToolbars(OnEnable2, OnDisabl2e,
 					ApplicationLauncher.AppScenes.MAPVIEW | ApplicationLauncher.AppScenes.TRACKSTATION,
 					MODID,
-					Localizer.Format("#LOC_TMO_26"),
+					"tooManyOrbitsButton",
 					//rp.BuildPath("ToolbarIcon-Green-38", false),
-					resourceProvider.BuildPath(Localizer.Format("#LOC_TMO_18"), false),
+					resourceProvider.BuildPath("ToolbarIcon-38", false),
 					//rp.BuildPath("ToolbarIcon-Green-24", false),
-					resourceProvider.BuildPath(Localizer.Format("#LOC_TMO_27"), false)
+					resourceProvider.BuildPath("ToolbarIcon-24", false)
 
 				);
 			}
@@ -153,14 +152,14 @@ namespace TooManyOrbits
 				MapView.OnExitMapView -= OnExitMapView;
 			}
 
-			Log.Debug(Localizer.Format("#LOC_TMO_28"));
+			Log.Debug("Disposing window");
 			m_window.Dispose();
 
-			Log.Debug(Localizer.Format("#LOC_TMO_29"));
+			Log.Debug("Disposing OrbitVisibilityController");
 			m_visibilityController.OnVisibilityChanged -= OnOrbitVisibilityChanged;
 			m_visibilityController.Dispose();
 
-			Log.Debug(Localizer.Format("#LOC_TMO_30"));
+			Log.Debug("Writing configuration file");
 			string configurationDirectory = Path.GetDirectoryName(ConfigurationFile);
 			if (configurationDirectory != null && !Directory.Exists(configurationDirectory))
 				Directory.CreateDirectory(configurationDirectory);
@@ -224,7 +223,7 @@ namespace TooManyOrbits
 			const float duration = 1.5f;
 			if (enabled)
 			{
-				var message = orbitsVisible ? Localizer.Format("#LOC_TMO_31") : Localizer.Format("#LOC_TMO_32");
+				var message = orbitsVisible ? "Orbits shown" : "Orbits hidden";
 				ScreenMessages.PostScreenMessage(message, duration);
 			}
 		}

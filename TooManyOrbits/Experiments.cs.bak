@@ -1,5 +1,4 @@
-#if false
-using KSP.Localization;
+﻿#if false
 using System.Reflection;
 using UnityEngine;
 
@@ -10,22 +9,22 @@ namespace TooManyOrbits
 	{
 		public static void LogTargetInfo(ITargetable target)
 		{
-			var method = typeof(OrbitRenderer).GetMethod(Localizer.Format("#LOC_TMO_2"), BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+			var method = typeof(OrbitRenderer).GetMethod("GetOrbitColour", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
 			Color orbitColor2 = (Color)method.Invoke(target.GetOrbitDriver().Renderer, new object[0]);
 
-			Log.Debug(Localizer.Format("#LOC_TMO_3") + target.GetName());
-			Log.Debug(Localizer.Format("#LOC_TMO_4") + target.GetOrbitDriver().Renderer.orbitColor);
-			Log.Debug(Localizer.Format("#LOC_TMO_5") + orbitColor2);
-			Log.Debug(Localizer.Format("#LOC_TMO_6") + FlightGlobals.Vessels.Contains(target.GetVessel()));
-			Log.Debug(Localizer.Format("#LOC_TMO_7") + (target.GetOrbitDriver().Renderer == target.GetVessel().orbitRenderer));
-			Log.Debug(Localizer.Format("#LOC_TMO_8") + target.GetOrbitDriver().Renderer.drawMode);
-			Log.Debug(Localizer.Format("#LOC_TMO_9") + target.GetOrbitDriver().Renderer.isActive);
-			Log.Debug(Localizer.Format("#LOC_TMO_10") + target.GetOrbitDriver().Renderer.isFocused);
-			Log.Debug(Localizer.Format("#LOC_TMO_11") + target.GetOrbitDriver().drawOrbit);
-			Log.Debug(Localizer.Format("#LOC_TMO_12") + target.GetOrbitDriver().updateMode);
-			Log.Debug(Localizer.Format("#LOC_TMO_13") + target.GetOrbitDriver().lastMode);
-			Log.Debug(Localizer.Format("#LOC_TMO_14") + target.GetOrbitDriver().orbitColor);
-			Log.Debug(Localizer.Format("#LOC_TMO_15") + (target.GetVessel().patchedConicRenderer != null));
+			Log.Debug("Target name: " + target.GetName());
+			Log.Debug("Target orbit color 1: " + target.GetOrbitDriver().Renderer.orbitColor);
+			Log.Debug("Target orbit color 2: " + orbitColor2);
+			Log.Debug("Target in vessel list: " + FlightGlobals.Vessels.Contains(target.GetVessel()));
+			Log.Debug("Target same orbit renderer: " + (target.GetOrbitDriver().Renderer == target.GetVessel().orbitRenderer));
+			Log.Debug("Target orbit renderer mode: " + target.GetOrbitDriver().Renderer.drawMode);
+			Log.Debug("Target isActive: " + target.GetOrbitDriver().Renderer.isActive);
+			Log.Debug("Target isFocused: " + target.GetOrbitDriver().Renderer.isFocused);
+			Log.Debug("Target orbit driver draw: " + target.GetOrbitDriver().drawOrbit);
+			Log.Debug("Target orbit driver update mode: " + target.GetOrbitDriver().updateMode);
+			Log.Debug("Target orbit driver last mode: " + target.GetOrbitDriver().lastMode);
+			Log.Debug("Target orbit driver color: " + target.GetOrbitDriver().orbitColor);
+			Log.Debug("Target has conic renderer: " + (target.GetVessel().patchedConicRenderer != null));
 
 		}
 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2005
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TooManyOrbits", "TooManyOrbits\TooManyOrbits.csproj", "{14A712A2-023A-4F7A-8433-51553D79A5E6}"
 EndProject
@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		buildRelease.bat = buildRelease.bat
 		ChangeLog.txt = ChangeLog.txt
 		deploy.bat = deploy.bat
+		GameData\TooManyOrbits\Localization\en-us.cfg = GameData\TooManyOrbits\Localization\en-us.cfg
 		jenkins.txt = jenkins.txt
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md

@@ -1,5 +1,4 @@
-using KSP.Localization;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using TooManyOrbits.Commands;
 using TooManyOrbits.Filter;
 using static TooManyOrbits.UI.RegisterToolbar;
@@ -54,7 +53,7 @@ namespace TooManyOrbits
 				return;
 			}
 
-			Log.Debug(Localizer.Format("#LOC_TMO_16"));
+			Log.Debug("Showing orbits");
 			m_hideOrbitCommands.Undo();
 			m_hideOrbitCommands = new CommandSet();
 			IsVisible = true;
@@ -69,7 +68,7 @@ namespace TooManyOrbits
 				//return;
 			}
 
-			Log.Debug(Localizer.Format("#LOC_TMO_17"));
+			Log.Debug("Hiding orbits");
 			CreateHideVesselCommands(m_hideOrbitCommands);
 			CreateHideBodiesCommands(m_hideOrbitCommands);
 			m_hideOrbitCommands.Execute();

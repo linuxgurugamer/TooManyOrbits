@@ -1,5 +1,4 @@
-using KSP.Localization;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using ClickThroughFix;
@@ -109,17 +108,17 @@ namespace TooManyOrbits.UI
 			DrawWindowButtons();
 
 			bool enabled = !m_visibilityController.IsVisible;
-			bool shouldEnable = GUILayout.Toggle(enabled, Localizer.Format("#LOC_TMO_33"));
+			bool shouldEnable = GUILayout.Toggle(enabled, "Enabled");
 			if (enabled != shouldEnable)
 			{
 				m_visibilityController.Toggle();
 			}
 
 			GUILayout.Space(20);
-			m_configuration.HideVesselIcons = GUILayout.Toggle(m_configuration.HideVesselIcons, Localizer.Format("#LOC_TMO_34"));
-			m_configuration.HideVesselOrbits = GUILayout.Toggle(m_configuration.HideVesselOrbits, Localizer.Format("#LOC_TMO_35"));
-			m_configuration.HideCelestialBodyIcons = GUILayout.Toggle(m_configuration.HideCelestialBodyIcons, Localizer.Format("#LOC_TMO_36"));
-			m_configuration.HideCelestialBodyOrbits = GUILayout.Toggle(m_configuration.HideCelestialBodyOrbits, Localizer.Format("#LOC_TMO_37"));
+			m_configuration.HideVesselIcons = GUILayout.Toggle(m_configuration.HideVesselIcons, "Hide vessel icons");
+			m_configuration.HideVesselOrbits = GUILayout.Toggle(m_configuration.HideVesselOrbits, "Hide vessel orbits");
+			m_configuration.HideCelestialBodyIcons = GUILayout.Toggle(m_configuration.HideCelestialBodyIcons, "Hide celestial body icons");
+			m_configuration.HideCelestialBodyOrbits = GUILayout.Toggle(m_configuration.HideCelestialBodyOrbits, "Hide celestial body orbits");
 			GUILayout.Space(20);
 			DrawKeyBinding();
 			GUILayout.EndVertical();
@@ -173,12 +172,12 @@ namespace TooManyOrbits.UI
             }
 
             GUILayout.BeginHorizontal();
-			GUILayout.Label(Localizer.Format("#LOC_TMO_38"));
+			GUILayout.Label("Hotkey: ");
 			GUILayout.Space(10);
 
 			if (m_setKeyMode)
 			{
-				GUILayout.Label(Localizer.Format("#LOC_TMO_39"), m_textfieldStyle);
+				GUILayout.Label("<Press a key>", m_textfieldStyle);
 				KeyCode? newKeyCode = GetNextPressedKey();
 
 				if (newKeyCode.HasValue)

@@ -1,5 +1,11 @@
 ChangeLog
 
+1.1.7
+	Fixed error where configuration file is missing and trying to open for read or save shows error, wasn't causing any issue other than log spam
+	Removed some log spam
+	Removed internal logging module, added reference to KSP_Log in the SpaceTux library
+	Localized the strings in the mod
+
 1.1.6.6
 	Added code to save settings on every scene change
 
