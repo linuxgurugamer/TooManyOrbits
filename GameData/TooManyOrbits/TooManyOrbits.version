@@ -1,6 +1,6 @@
 {
   "NAME": "TooManyOrbits",
-  "URL": "http://ksp.spacetux.net/avc/TooManyOrbits",
+  "URL": "https://raw.githubusercontent.com/linuxgurugamer/TooManyOrbits/refs/heads/master/TooManyOrbits.version",
   "DOWNLOAD": "https://spacedock.info/mod/1340/TooManyOrbits",
   "GITHUB": {
     "USERNAME": "linuxgurugamer",
@@ -9,8 +9,8 @@
   "VERSION": {
     "MAJOR": 1,
     "MINOR": 1,
-    "PATCH": 6,
-    "BUILD": 6
+    "PATCH": 7,
+    "BUILD": 0
   },
   "KSP_VERSION": {
     "MAJOR": 1,
@@ -21,5 +21,10 @@
     "MAJOR": 1,
     "MINOR": 12,
     "PATCH": 0
+  },
+  "KSP_VERSION_MAX": {
+    "MAJOR": 1,
+    "MINOR": 12,
+    "PATCH": 99
   }
 }
