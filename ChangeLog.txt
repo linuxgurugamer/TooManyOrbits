@@ -1,5 +1,8 @@
 ChangeLog
 
+1.1.7.1
+	Fixed text for icon not showing up in the toolbar
+
 1.1.7
 	Fixed error where configuration file is missing and trying to open for read or save shows error, wasn't causing any issue other than log spam
 	Removed some log spam

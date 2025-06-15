@@ -121,8 +121,8 @@ namespace TooManyOrbits
 					//rp.BuildPath("ToolbarIcon-Green-38", false),
 					resourceProvider.BuildPath(Localizer.Format("#LOC_TMO_18"), false),
 					//rp.BuildPath("ToolbarIcon-Green-24", false),
-					resourceProvider.BuildPath(Localizer.Format("#LOC_TMO_27"), false)
-
+					resourceProvider.BuildPath(Localizer.Format("#LOC_TMO_27"), false),
+					MODNAME
 				);
 			}
 		}
